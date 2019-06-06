@@ -23,6 +23,6 @@ public interface EmployeeApi {
     @PUT("/api/v1/update/{id}")
     Observable<NewEmployee> updateEmployee(@Path("id") long id, @Body NewEmployee employee);
 
-    @DELETE("/api/v1/update/{id}")
-    Observable<Employee> deleteEmployee(@Path("id") String id);
+    @DELETE("/api/v1/delete/{id}")
+    Observable<Employee> deleteEmployee(@Path("id") long id);
 }

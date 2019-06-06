@@ -45,4 +45,9 @@ public class EmployeeRepository {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
+    public Observable<Employee> deleteEmployee(Employee employee) {
+        return employeeApi.deleteEmployee(employee.getId())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
 }
